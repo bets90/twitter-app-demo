@@ -1,0 +1,14 @@
+{
+  "twitterApp": {
+    "consumer": {
+      "key": "",
+      "secret": ""
+    },
+    "access_token": {
+      "key": "",
+      "secret": ""
+    }
+  },
+  "public": {
+  }
+}

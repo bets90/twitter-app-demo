@@ -1,0 +1,35 @@
+
+
+<body xmlns="http://www.w3.org/1999/html">
+  <div class="container">
+    <header>
+      <h1>Tweet from here!</h1>
+
+    </header>
+
+      {{> loginButtons}}
+      {{#if currentUser}}
+          You're logged in.
+          {{> tweetinput}}
+      {{else}}
+          You're not logged in.
+      {{/if}}
+
+  </div>
+</body>
+
+<template name="tweetinput">
+    <form class="newtweet">
+        <label for="textarea" ></label>
+        <textarea name="tweet" class="form-control" rows="3" id="comment">kkk </textarea><br>
+        <label class="radio-inline"><input type="radio" checked="checked" name="twtype" value="text">Text</label>
+        <label class="radio-inline"><input type="radio" name="twtype" value="photo">Photo</label>
+        <label class="radio-inline"><input type="radio" name="twtype" value="video">Video</label>
+        <button type="submit" class="btn btn-primary btn-block">Send!</button>
+    </form>
+
+    {{#each logs}}
+        <li>{{text}}</li>
+    {{/each}}
+</template>
+
